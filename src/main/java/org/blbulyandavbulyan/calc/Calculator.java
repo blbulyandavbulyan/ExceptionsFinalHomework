@@ -1,5 +1,8 @@
 package org.blbulyandavbulyan.calc;
 
+import org.blbulyandavbulyan.calc.exceptions.InvalidOperandException;
+import org.blbulyandavbulyan.calc.exceptions.InvalidOperationException;
+
 /**
  * Предоставляет класс калькулятора, который умеет умножать, делить, складывать и вычитать, возводить в степень
  */
@@ -18,11 +21,11 @@ public class Calculator {
      * Делит числа
      * @param a делимое
      * @param b делитель
-     * @throws IllegalArgumentException если b = 0
+     * @throws InvalidOperandException если b = 0
      * @return частное
      */
     public double divide(double a, double b){
-        if(b == 0)throw new IllegalArgumentException("Делитель не может быть 0!");
+        if(b == 0)throw new InvalidOperandException("Делитель не может быть 0!");
         return a/b;
     }
 
@@ -50,12 +53,12 @@ public class Calculator {
      * Возводит в степень
      * @param a основание
      * @param b показатель степень
-     * @throws IllegalArgumentException если b <= и a = 0
+     * @throws InvalidOperandException если b <= и a = 0
      * @return искомую степень
      */
     public double pow(double a, double b){
         if(a == 0 && b <= 0){
-            throw new IllegalArgumentException("возведение 0 в отрицательную или нулевую степень не разрешено!");
+            throw new InvalidOperationException("возведение 0 в отрицательную или нулевую степень не разрешено!");
         }
         return Math.pow(a, b);
     }
