@@ -31,6 +31,7 @@ public class ExpressionParser {
                     case "-" -> calculator.subtract(a, b);
                     case "/" -> calculator.divide(a, b);
                     case "*" -> calculator.multiply(a, b);
+                    case "pow" -> calculator.pow(a, b);
                     default -> throw new InvalidOperationException("Введённая вами операция не поддерживается!");
                 };
             }
