@@ -1,6 +1,5 @@
 package org.blbulyandavbulyan.calc;
 
-import org.blbulyandavbulyan.calc.Calculator;
 import org.blbulyandavbulyan.calc.exceptions.InvalidInputException;
 import org.blbulyandavbulyan.calc.exceptions.InvalidOperandException;
 import org.blbulyandavbulyan.calc.exceptions.InvalidOperationException;
