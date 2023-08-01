@@ -14,7 +14,7 @@ public class Main {
         }
         catch (InvalidInputException e){
             System.out.println(e.getMessage());
-            System.out.println(e.getCause().getMessage());
+            if(e.hasCause())System.out.println(e.getCause().getMessage());
         }
     }
 }
