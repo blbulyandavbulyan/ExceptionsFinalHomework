@@ -1,5 +1,8 @@
 package org.blbulyandavbulyan.calc.exceptions;
 
+/**
+ * Данное исключение бросает парсер в случае некорректного выражения
+ */
 public class InvalidInputException extends RuntimeException{
     private boolean hasCause;
 
