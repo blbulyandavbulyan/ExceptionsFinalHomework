@@ -16,7 +16,7 @@ public class ExpressionParser {
     }
 
     public double parse(String expression) {
-        Pattern pattern = Pattern.compile("(.+) *([+*\\-\\/]|pow) *(.+)");
+        Pattern pattern = Pattern.compile("(-?\\d+\\.?\\d*) *([+*\\-\\/]|pow) *(-?\\d+\\.?\\d*)");
         Matcher matcher = pattern.matcher(expression);
         if(matcher.find()){
             String firstOperand = matcher.group(1);
